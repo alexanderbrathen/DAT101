@@ -12,31 +12,54 @@
     <ol>
       <li>Where should you use constants, and where should you use variables? Can they all be constants?</li>
       <p>
-				[Replace this with you answer]
+
+				En konstant er en verdi som ikke skal endres etter at den er satt. Du bruker konstanter når du vet at verdien ikke vil (eller skal) forandres i løpet av programmet. 
+        Dette kan forbedre kodekvaliteten, gjøre det enklere å forstå og redusere risikoen for feil.
+
+        En variabel brukes når du trenger å lagre en verdi som kan endre seg over tid. 
+        Variabler brukes ofte når programmet tar inn brukerinput, eller når verdier oppdateres gjennom programmet.
+
 			</p>
       <li>How do parentheses affect the arithmetic outcome of an expression?</li>
       <p>
-				[Replace this with you answer]
+
+				Parenteser gjør at operasjoner inni dem utføres først, selv om andre operasjoner utenfor har høyere prioritet.
+
 			</p>
       <li>How do we limit floating-point numbers to a given number of decimals?</li>
       <p>
-				[Replace this with you answer]
+
+				For å begrense flyttall til et bestemt antall desimaler, kan vi bruke funksjoner som runder av tallet til det ønskede antallet desimaler. 
+        I JavaScript finnes det en praktisk metode som heter toFixed()
+
 			</p>
+
       <li>How can we compare two floating-point values to see if they are equal (is 12.199999 the same as 12.2)?</li>
+
       <p>
-				[Replace this with you answer]
+
+				Math.abs() for å finne den absolutte forskjellen mellom tallene, og hvis forskjellen er mindre enn 0.0001, regnes de som like.
+
 			</p>
       <li>What do comparison operators return, and how can we check if they are FALSE or TRUE?</li>
       <p>
-				[Replace this with you answer]
+
+				Du kan bruke sammenligningsoperatorer som == for å sjekke om en variabel er TRUE eller FALSE. 
+        For eksempel, if (x == true) sjekker om x er TRUE.
+
 			</p>
       <li>How does the Math.random() function work, and what can it be used for?</li>
       <p>
-				[Replace this with you answer]
+
+				Denne funksjonen gir deg et tilfeldig tall mellom 0 (inkludert) og 1 (ikke inkludert). 
+        Den brukes ofte til å lage tilfeldige resultater i programmer.
+
 			</p>
       <li>What is modulus (%), and when do we need this operator in mathematical operations?</li>
       <p>
-				[Replace this with you answer]
+
+				%, denne gir resten når du deler et tall med et annet. For eksempel, 7 % 3 gir 1, fordi 7 delt på 3 gir 2 med en rest på 1.
+        
 			</p>
     </ol>
 		<script type="module" src="./task_2-2.mjs" defer></script>

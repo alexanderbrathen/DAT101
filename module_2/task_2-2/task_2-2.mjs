@@ -5,8 +5,8 @@ initPrintOut(document.getElementById("txtOut"));
 printOut("--- Part 1 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
 
-let resultat1 = 2 + 3 * 2 - 4 * 6;
-let resultat2 = 2 + (3 * (2 - 4) * 6);
+const resultat1 = 2 + 3 * 2 - 4 * 6;
+const resultat2 = 2 + (3 * (2 - 4) * 6);
 
 printOut(resultat2.toString());
 printOut("The answer is: " + resultat2);
@@ -36,30 +36,49 @@ printOut(newLine);
 
 printOut("--- Part 4 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-let totalMin = 6322.52;
-let timMinSek = 60;
-let timDag = 24;
-let dager2 = Math.floor(totalMin / timMinSek / timDag); //math.floor runder jeg ned. Her får jeg 4 dager uten desimaler.
 
+const hoursInDay = 24;
+const minutesInHour = 60;
+const secondsInMinute = 60;
 
+const numberOfMinutes = 6322.52;  // dette er antall minutter
+let part4_Calc = numberOfMinutes / (60 *24);
+const part4_Days = Math.floor(part4_Calc);
+printOut("Days = " + part4_Days);
 
-let timer2 = dager2 * timDag;
-let minutter2 = totalMin;
-let sekunder2 = totalMin * timMinSek;
+part4_Calc = part4_Calc - part4_Days;
+part4_Calc = part4_Calc * hoursInDay;
+const part4_Hours = Math.floor(part4_Calc);
+printOut("Hours = " + part4_Hours);
 
+part4_Calc = part4_Calc - part4_Hours;
+part4_Calc = part4_Calc * minutesInHour;
+const part4_Minutes = Math.floor(part4_Calc);
+printOut ("Minutes = " + part4_Minutes);
 
-
-printOut("Det blir " + dager2 + " dager, " + timer2 +" timer, " + minutter2 + " minutter og " + sekunder2 + " sekunder." );
+part4_Calc = part4_Calc - part4_Minutes;
+part4_Calc = part4_Calc * secondsInMinute;
+const part4_Seconds = Math.floor(part4_Calc);
+printOut("seconds = " + part4_Seconds);
 printOut(newLine);
 
 printOut("--- Part 5 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-printOut("Replace this with you answer!");
-printOut(newLine);
+const NOK = 76 / 8.6;
+const USD = 8.6 / 76;
+const amountUSD = 54;
+const amountNOK = Math.round(amountUSD * NOK);
+printOut (amountUSD + " dollar is " + amountNOK + " kroner ");
+amountUSD = Math.round(amountNOK * USD);
+printOut (amountNOK + " kroner is " + amountUSD + " dollars ");
+printOut (newLine);
 
 printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-printOut("Replace this with you answer!");
+
+const tekst = "Dette er en konstant tekst.";
+console.log(tekst);  // Resultat: "Dette er en konstant tekst."
+
 printOut(newLine);
 
 printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
@@ -74,7 +93,8 @@ printOut(newLine);
 
 printOut("--- Part 9 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-printOut("Replace this with you answer!");
+const r = Math.floor(Math.random() * 360) + 1;
+printOut("Random number:" + r);
 printOut(newLine);
 
 /* Task 10*/
